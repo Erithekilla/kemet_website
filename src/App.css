@@ -9,7 +9,7 @@
   min-height: calc(100vh - 92px);
   width: 100%;
   display: grid;
-  grid-template-columns: minmax(70px, clamp(86px, 10vw, 142px)) minmax(320px, 1060px) minmax(70px, clamp(86px, 10vw, 142px));
+  grid-template-columns: minmax(68px, clamp(82px, 9vw, 132px)) minmax(320px, 1060px) minmax(68px, clamp(82px, 9vw, 132px));
   grid-template-areas: "pillar-left content pillar-right";
   align-items: start;
   text-align: center;
@@ -19,25 +19,28 @@
 }
 
 .pillar{
-  width: min(100%, 132px);
-  height: calc(100vh - 132px);
-  max-height: 760px;
-  margin: 20px auto;
-  position: sticky;
-  top: 112px;
+  width: clamp(82px, 8vw, 118px);
+  height: calc(100vh - 92px);
+  margin: 0;
+  position: fixed;
+  top: 92px;
+  z-index: 2;
   object-fit: contain;
-  filter: saturate(1.14) contrast(1.12) drop-shadow(0 0 16px rgba(255, 200, 77, 0.14)) drop-shadow(0 26px 34px rgba(0, 0, 0, 0.5));
+  filter: saturate(1.14) contrast(1.12) drop-shadow(0 0 16px rgba(255, 200, 77, 0.14)) drop-shadow(0 22px 30px rgba(0, 0, 0, 0.5));
   opacity: 0.98;
   transform: translateZ(0);
+  pointer-events: none;
 }
 
 .pillar-left {
   grid-area: pillar-left;
+  left: clamp(8px, 1.5vw, 24px);
   object-position: right center;
 }
 
 .pillar-right {
   grid-area: pillar-right;
+  right: clamp(8px, 1.5vw, 24px);
   object-position: left center;
 }
 
