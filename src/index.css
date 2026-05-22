@@ -1,0 +1,60 @@
+:root {
+  --text: #f7ead2;
+  --text-muted: rgba(247, 234, 210, 0.72);
+  --text-h: #fff6df;
+  --bg: #120b09;
+  --surface: #1f1510;
+  --surface-strong: #2b1b13;
+  --border: rgba(224, 177, 75, 0.28);
+  --gold: #d6a640;
+  --gold-light: #ffe09a;
+  --turquoise: #36c7b9;
+  --red-earth: #8f2f24;
+  --code-bg: #251913;
+  --accent: var(--gold);
+  --accent-bg: rgba(214, 166, 64, 0.12);
+  --accent-border: rgba(214, 166, 64, 0.46);
+  --social-bg: rgba(255, 224, 154, 0.1);
+  --shadow:
+    rgba(0, 0, 0, 0.28) 0 18px 40px -18px, rgba(0, 0, 0, 0.24) 0 8px 16px -10px;
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(54, 199, 185, 0.12), transparent 34rem),
+    radial-gradient(circle at 82% 18%, rgba(214, 166, 64, 0.14), transparent 26rem),
+    linear-gradient(180deg, #170e0b 0%, var(--bg) 48%, #0b0706 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--bg);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
