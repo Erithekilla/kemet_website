@@ -1,7 +1,7 @@
 .home {
-  width: min(100%, 720px);
+  width: min(100%, 860px);
   display: grid;
-  gap: 28px;
+  gap: 32px;
 }
 
 .intro {
@@ -16,15 +16,17 @@
   color: var(--gold-light);
   font-size: 13px;
   font-weight: 800;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
+  text-shadow: 0 0 14px rgba(255, 200, 77, 0.3);
 }
 
 .intro h1 {
   color: var(--text-h);
-  font-size: clamp(34px, 6vw, 58px);
+  font-size: clamp(38px, 7vw, 72px);
   line-height: 1;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
+  text-shadow: 0 0 26px rgba(34, 242, 220, 0.14), 0 0 34px rgba(255, 36, 79, 0.12);
 }
 
 .copy {
@@ -32,11 +34,23 @@
   gap: 14px;
   padding: 24px;
   background:
-    linear-gradient(160deg, rgba(43, 27, 19, 0.92), rgba(18, 11, 9, 0.97)),
-    radial-gradient(circle at top left, rgba(54, 199, 185, 0.12), transparent 70%);
-  border: 1px solid var(--border);
+    linear-gradient(160deg, rgba(31, 12, 32, 0.86), rgba(7, 4, 12, 0.96)),
+    linear-gradient(90deg, rgba(255, 36, 79, 0.1), rgba(34, 242, 220, 0.08));
+  border: 1px solid rgba(255, 200, 77, 0.3);
   border-radius: 8px;
   box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.copy::before,
+.practiceCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(255, 200, 77, 0.16), transparent 16%, transparent 84%, rgba(34, 242, 220, 0.14));
+  opacity: 0.44;
 }
 
 .copy p,
@@ -44,6 +58,8 @@
   color: var(--text-muted);
   font-size: 16px;
   line-height: 1.75;
+  position: relative;
+  z-index: 1;
 }
 
 .practiceHeader {
@@ -54,9 +70,10 @@
 
 .practiceHeader h2 {
   color: var(--gold-light);
-  font-size: clamp(24px, 4vw, 34px);
+  font-size: clamp(26px, 4vw, 38px);
   line-height: 1.1;
   text-transform: uppercase;
+  text-shadow: 0 0 22px rgba(255, 200, 77, 0.2);
 }
 
 .practiceGrid {
@@ -73,17 +90,21 @@
   padding: 24px;
   text-align: left;
   background:
-    linear-gradient(160deg, rgba(43, 27, 19, 0.95), rgba(18, 11, 9, 0.98)),
-    linear-gradient(90deg, rgba(214, 166, 64, 0.09), transparent);
-  border: 1px solid var(--border);
+    linear-gradient(160deg, rgba(31, 12, 32, 0.9), rgba(7, 4, 12, 0.96)),
+    linear-gradient(90deg, rgba(255, 36, 79, 0.11), rgba(34, 242, 220, 0.1));
+  border: 1px solid rgba(255, 200, 77, 0.28);
   border-radius: 8px;
   box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
 }
 
 .practiceCard h3 {
   color: var(--text-h);
-  font-size: 22px;
+  font-size: 24px;
   line-height: 1.18;
+  position: relative;
+  z-index: 1;
 }
 
 .cardMark {
@@ -91,9 +112,12 @@
   place-items: center;
   width: 38px;
   height: 38px;
-  border: 1px solid var(--accent-border);
+  border: 1px solid rgba(34, 242, 220, 0.44);
   border-radius: 50%;
-  background: var(--accent-bg);
+  background: linear-gradient(135deg, rgba(255, 36, 79, 0.22), rgba(34, 242, 220, 0.16));
+  box-shadow: var(--neon-shadow);
+  position: relative;
+  z-index: 1;
 }
 
 @media (max-width: 720px) {
