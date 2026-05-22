@@ -3,6 +3,7 @@ import HeaderT from './components/HeaderT'
 import Home from './pages/Home'
 import Astrologia from './pages/Astrologia'
 import Kaballah from './pages/Kaballah'
+import LiberResh from './pages/LiberResh'
 import Tarot from './pages/Tarot'
 import bravery from './assets/bravery.png'
 import justice from './assets/justice.png'
@@ -19,6 +20,7 @@ function App() {
             <Route path="/" element={<Home/>}></Route>
             <Route path="/astrologia" element={<Astrologia/>}></Route>
             <Route path="/kaballah" element={<Kaballah/>}></Route>
+            <Route path="/liber-resh" element={<LiberResh/>}></Route>
             <Route path="/tarot" element={<Tarot/>}></Route>
           </Routes>
         </main>

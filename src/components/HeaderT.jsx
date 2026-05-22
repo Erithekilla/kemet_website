@@ -20,6 +20,7 @@ function HeaderT(){
                 <ul>
                     <li><NavLink to="/astrologia" className={linkClass}>Astrologia</NavLink></li>
                     <li><NavLink to="/kaballah" className={linkClass}>Kaballah</NavLink></li>
+                    <li><NavLink to="/liber-resh" className={linkClass}>Liber Resh</NavLink></li>
                     <li><NavLink to="/tarot" className={linkClass}>Tarot</NavLink></li>
                 </ul>
             </nav>
