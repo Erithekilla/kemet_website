@@ -14,7 +14,9 @@ function App() {
     <>
       <HeaderT/>
       <section className="container">
-        <img className="pillar pillar-left" src={leftPillar} alt="" aria-hidden="true" />
+        <aside className="pillar-frame pillar-frame-left" aria-hidden="true">
+          <img className="pillar" src={leftPillar} alt="" />
+        </aside>
         <main className="base">
           <Routes>
             <Route path="/" element={<Home/>}></Route>
@@ -24,7 +26,9 @@ function App() {
             <Route path="/tarot" element={<Tarot/>}></Route>
           </Routes>
         </main>
-        <img className="pillar pillar-right" src={rightPillar} alt="" aria-hidden="true" />
+        <aside className="pillar-frame pillar-frame-right" aria-hidden="true">
+          <img className="pillar" src={rightPillar} alt="" />
+        </aside>
       </section>
     </>
   )

@@ -5,11 +5,14 @@
 }
 
 .container{
+  --pillar-rail: clamp(150px, 14vw, 230px);
+  --pillar-width: clamp(152px, 12.5vw, 214px);
+
   margin: 0 auto;
   min-height: calc(100vh - 92px);
   width: 100%;
   display: grid;
-  grid-template-columns: minmax(112px, clamp(132px, 13vw, 196px)) minmax(320px, 1040px) minmax(112px, clamp(132px, 13vw, 196px));
+  grid-template-columns: minmax(128px, var(--pillar-rail)) minmax(320px, 1040px) minmax(128px, var(--pillar-rail));
   grid-template-areas: "pillar-left content pillar-right";
   align-items: start;
   text-align: center;
@@ -18,30 +21,35 @@
     linear-gradient(180deg, rgba(12, 6, 14, 0.64), rgba(2, 1, 5, 0.9));
 }
 
-.pillar{
-  width: clamp(118px, 11vw, 172px);
+.pillar-frame {
+  width: var(--pillar-rail);
   height: calc(100vh - 92px);
-  margin: 0;
+  display: grid;
+  place-items: center;
   position: fixed;
   top: 92px;
   z-index: 2;
+  pointer-events: none;
+}
+
+.pillar{
+  width: min(var(--pillar-width), 92%);
+  height: 100%;
+  margin: 0;
   object-fit: contain;
   filter: saturate(1.14) contrast(1.12) drop-shadow(0 0 16px rgba(255, 200, 77, 0.14)) drop-shadow(0 22px 30px rgba(0, 0, 0, 0.5));
   opacity: 0.98;
   transform: translateZ(0);
-  pointer-events: none;
 }
 
-.pillar-left {
+.pillar-frame-left {
   grid-area: pillar-left;
-  left: clamp(10px, 2vw, 30px);
-  object-position: right center;
+  left: 0;
 }
 
-.pillar-right {
+.pillar-frame-right {
   grid-area: pillar-right;
-  right: clamp(10px, 2vw, 30px);
-  object-position: left center;
+  right: 0;
 }
 
 .base{
@@ -139,7 +147,7 @@
     min-height: auto;
   }
 
-  .pillar {
+  .pillar-frame {
     display: none;
   }
 
