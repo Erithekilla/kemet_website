@@ -9,7 +9,7 @@
   min-height: calc(100vh - 92px);
   width: 100%;
   display: grid;
-  grid-template-columns: minmax(68px, clamp(82px, 9vw, 132px)) minmax(320px, 1060px) minmax(68px, clamp(82px, 9vw, 132px));
+  grid-template-columns: minmax(112px, clamp(132px, 13vw, 196px)) minmax(320px, 1040px) minmax(112px, clamp(132px, 13vw, 196px));
   grid-template-areas: "pillar-left content pillar-right";
   align-items: start;
   text-align: center;
@@ -19,7 +19,7 @@
 }
 
 .pillar{
-  width: clamp(82px, 8vw, 118px);
+  width: clamp(118px, 11vw, 172px);
   height: calc(100vh - 92px);
   margin: 0;
   position: fixed;
@@ -34,13 +34,13 @@
 
 .pillar-left {
   grid-area: pillar-left;
-  left: clamp(8px, 1.5vw, 24px);
+  left: clamp(10px, 2vw, 30px);
   object-position: right center;
 }
 
 .pillar-right {
   grid-area: pillar-right;
-  right: clamp(8px, 1.5vw, 24px);
+  right: clamp(10px, 2vw, 30px);
   object-position: left center;
 }
 
