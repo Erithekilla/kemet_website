@@ -154,6 +154,8 @@
   .base {
     width: 100%;
     min-height: calc(100vh - 174px);
+    padding-inline: 16px;
+    overflow-x: hidden;
   }
 
   .topic-grid {
