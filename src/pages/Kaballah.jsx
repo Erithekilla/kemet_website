@@ -196,9 +196,9 @@ function Kaballah(){
                     <svg className={styles.paths} viewBox="0 0 100 100" aria-hidden="true" preserveAspectRatio="none">
                         <defs>
                             <linearGradient id="kaballahActivePath" x1="0" y1="0" x2="1" y2="1">
-                                <stop offset="0%" stopColor="#ff244f" />
-                                <stop offset="48%" stopColor="#ffc84d" />
-                                <stop offset="100%" stopColor="#22f2dc" />
+                                <stop offset="0%" stopColor="#6f0d23" />
+                                <stop offset="52%" stopColor="#c99342" />
+                                <stop offset="100%" stopColor="#2a0710" />
                             </linearGradient>
                         </defs>
                         {paths.map((path) => {
